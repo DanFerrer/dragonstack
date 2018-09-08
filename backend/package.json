@@ -5,10 +5,13 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./bin/server",
-    "dev": "nodemon ./bin/server"
+    "dev": "nodemon ./bin/server",
+    "configure": "./bin/configure_db.sh",
+    "configure-dev": "yarn run configure && yarn run dev"
   },
   "devDependencies": {
     "express": "^4.16.3",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "pg": "^7.4.3"
   }
 }

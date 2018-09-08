@@ -13,6 +13,7 @@ function calculateExperation() {
 class Generation {
     constructor() {        
         this.experation = calculateExperation();
+        this.generationId = undefined;
     }
 
     newDragon() {
