@@ -2,7 +2,7 @@
 
 echo "Configuring dragonstackdb"
 
-export PGPASSWORD = 'node_password';
+# export PGPASSWORD = 'node_password';
 
 dropdb -U node_user dragonstackdb
 createdb -U node_user dragonstackdb

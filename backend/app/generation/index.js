@@ -21,7 +21,7 @@ class Generation {
             throw new Error(`This generation experied on ${this.experation}`);
         }
 
-        return new Dragon();
+        return new Dragon({ generationId: this.generationId })
     }
 
 }
