@@ -6,10 +6,18 @@ const generationRouter = require('./api/generation');
 const app = express();
 const engine = new GenerationEngine();
 
+app.locals.engine = engine;
+
 app.use('/dragon', dragonRouter);
 app.use('/generation', generationRouter);
 
-app.locals.engine = engine;
+app.use((err, req, res, next) => {
+    res.status(err.statusCode || 500).json({
+        type: 'error',
+        message: err.message
+    });
+});
+
 
 engine.start();
 
